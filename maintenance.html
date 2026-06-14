@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site Maintenance</title>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #050505;
+      color: #f7f7f7;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    .box {
+      max-width: 520px;
+      padding: 40px;
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 24px;
+      background: rgba(15, 15, 15, 0.95);
+      box-shadow: 0 20px 80px rgba(0,0,0,0.35);
+    }
+    h1 {
+      margin: 0 0 16px;
+      font-size: 2rem;
+      letter-spacing: 0.05em;
+    }
+    p {
+      margin: 12px 0;
+      color: #c9c9c9;
+      line-height: 1.8;
+    }
+    small {
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h1>We'll be right back</h1>
+    <p>The site is temporarily offline for updates and improvements. Please check back soon once maintenance is complete.</p>
+    <p><small>To put the site back online, remove the <code>.maintenance</code> file or set <code>MAINTENANCE_MODE=false</code> in your <code>.env</code> file and restart the server.</small></p>
+  </div>
+</body>
+</html>
