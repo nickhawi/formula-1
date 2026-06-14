@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formula 1 | Official Racing Experience</title>
+  <link rel="stylesheet" href="formula1.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <div class="brand">
+        <span class="brand-mark">F</span>
+        <span class="brand-text">Formula 1</span>
+      </div>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#home" class="nav-link active" data-page="home">Home</a>
+        <a href="#teams" class="nav-link" data-page="teams">Teams</a>
+        <a href="#drivers" class="nav-link" data-page="drivers">Drivers</a>
+        <a href="#schedule" class="nav-link" data-page="schedule">Schedule</a>
+        <a href="#news" class="nav-link" data-page="news">News</a>
+        <a href="#chat" class="nav-link" data-page="chat">Chat</a>
+        <a href="#about" class="nav-link" data-page="about">About</a>
+      </nav>
+      <div class="auth-header">
+        <span class="auth-status" id="auth-status">Not signed in</span>
+        <span class="admin-status" id="admin-status">Admin offline</span>
+        <button class="btn btn-secondary header-btn" id="open-auth">Login / Sign Up</button>
+      </div>
+    </header>
+    <main class="page-content">
+
+    <section class="hero page-panel active" id="home" data-page="home">
+      <div class="hero-copy">
+        <p class="eyebrow">Official Formula 1 Experience</p>
+        <h1>Feel the speed of the 2026 FIA Formula 1 World Championship</h1>
+        <p>Discover race previews, live standings, driver stats, and official F1 content in a premium racing interface.</p>
+        <div class="hero-actions">
+          <a href="#schedule" class="btn btn-primary" data-page="schedule">View Schedule</a>
+          <button class="btn btn-secondary" id="hero-action">Live update</button>
+        </div>
+        <div class="hero-meta">
+          <div>
+            <span class="meta-label">Next Race</span>
+            <strong>Monaco Grand Prix</strong>
+          </div>
+          <div>
+            <span class="meta-label">Countdown</span>
+            <strong id="race-countdown">-- days</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-panel hero-panel-top">
+          <span>Qualifying leader</span>
+          <strong>Charles Leclerc</strong>
+        </div>
+        <div class="hero-panel hero-panel-bottom">
+          <span>Championship pace</span>
+          <strong>Max Verstappen</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="overview-section page-panel" id="overview" data-page="home">
+      <div class="section-heading">
+        <span class="section-tag">Championship</span>
+        <h2>Season overview</h2>
+      </div>
+      <div class="overview-grid">
+        <article class="stat-card">
+          <span>24</span>
+          <h3>Grand Prix races</h3>
+          <p>The full F1 calendar spans iconic circuits and street tracks around the world.</p>
+        </article>
+        <article class="stat-card highlight-card">
+          <span>320</span>
+          <h3>Points leader</h3>
+          <p>Current driver points after the latest round.</p>
+        </article>
+        <article class="stat-card">
+          <span>90%</span>
+          <h3>Pole conversion</h3>
+          <p>Top teams converting qualifying speed into race success.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="tabs-panel" aria-label="Quick tabs">
+      <div class="tabs-nav" role="tablist">
+        <button class="tab active" role="tab" aria-selected="true" data-tab="overview-panel">Overview</button>
+        <button class="tab" role="tab" aria-selected="false" data-tab="teams-panel">Teams</button>
+        <button class="tab" role="tab" aria-selected="false" data-tab="drivers-panel">Drivers</button>
+        <button class="tab" role="tab" aria-selected="false" data-tab="standings-panel">Standings</button>
+      </div>
+      <div class="tab-contents">
+        <article class="tab-content active" id="overview-panel">
+          <div class="panel-row">
+            <div class="panel-card">
+              <h3>Race strategy</h3>
+              <p>Teams balance tyre wear and fuel to chase the perfect lap sequence.</p>
+            </div>
+            <div class="panel-card">
+              <h3>Technical upgrades</h3>
+              <p>Aerodynamic packages and power unit updates shape every weekend.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="tab-content" id="teams-panel">
+          <div class="grid-panel">
+            <div class="info-card">
+              <h3>Red Bull Racing</h3>
+              <p>Dominant speed with aerodynamics tuned for every track.</p>
+            </div>
+            <div class="info-card">
+              <h3>Ferrari</h3>
+              <p>Historic power matched with relentless development.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="tab-content" id="drivers-panel">
+          <div class="grid-panel">
+            <div class="driver-card complex">
+              <strong>Max Verstappen</strong>
+              <span>Red Bull</span>
+              <p>Precision, pace, and championship momentum.</p>
+            </div>
+            <div class="driver-card complex">
+              <strong>Charles Leclerc</strong>
+              <span>Ferrari</span>
+              <p>Qualifying specialist with strong racecraft.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="tab-content" id="standings-panel">
+          <div class="standings-card">
+            <h3>Driver standings</h3>
+            <table>
+              <thead>
+                <tr><th>Pos</th><th>Driver</th><th>Team</th><th>Pts</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>1</td><td>Max Verstappen</td><td>Red Bull</td><td>320</td></tr>
+                <tr><td>2</td><td>Charles Leclerc</td><td>Ferrari</td><td>274</td></tr>
+                <tr><td>3</td><td>Lando Norris</td><td>McLaren</td><td>229</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="teams-section page-panel" id="teams" data-page="teams">
+      <div class="section-heading">
+        <span class="section-tag">Teams</span>
+        <h2>Official team lineup</h2>
+      </div>
+      <div class="teams-grid">
+        <article class="team-card redbull">
+          <img class="team-logo" src="https://via.placeholder.com/96x96.png?text=Red+Bull" alt="Red Bull logo">
+          <h3>Red Bull Racing</h3>
+          <p>Defending constructors champion with unrivaled pace and strategy.</p>
+          <p>Owner: Red Bull GmbH<br>Team Principal: Christian Horner<br>Technical Director: Pierre Waché<br>Lead Mechanic: Tom Hewitt</p>
+        </article>
+        <article class="team-card mercedes">
+          <img class="team-logo" src="https://via.placeholder.com/96x96.png?text=Mercedes" alt="Mercedes logo">
+          <h3>Mercedes-AMG Petronas</h3>
+          <p>High-performance engineering grounded in six consecutive titles.</p>
+          <p>Owner: Mercedes-Benz Group<br>Team Principal: Toto Wolff<br>Technical Director: James Allison<br>Lead Mechanic: Chris Varley</p>
+        </article>
+        <article class="team-card ferrari">
+          <img class="team-logo" src="https://via.placeholder.com/96x96.png?text=Ferrari" alt="Ferrari logo">
+          <h3>Scuderia Ferrari</h3>
+          <p>Immense heritage combined with a relentless pursuit of the championship.</p>
+          <p>Owner: Fiat Chrysler Automobiles<br>Team Principal: Fred Vasseur<br>Technical Director: David Sanchez<br>Lead Mechanic: Marco Ferretti</p>
+        </article>
+        <article class="team-card mclaren">
+          <img class="team-logo" src="https://via.placeholder.com/96x96.png?text=McLaren" alt="McLaren logo">
+          <h3>McLaren F1 Team</h3>
+          <p>British innovation brought back to the front of the grid.</p>
+          <p>Owner: McLaren Group<br>Team Principal: Andrea Stella<br>Technical Director: James Key<br>Lead Mechanic: Tom Stallard</p>
+        </article>
+        <article class="team-card aston-martin">
+          <img class="team-logo" src="https://via.placeholder.com/96x96.png?text=Aston+Martin" alt="Aston Martin logo">
+          <h3>Aston Martin</h3>
+          <p>Luxury racing with bold strategy and a fast-rising roster.</p>
+          <p>Owner: Lawrence Stroll<br>Team Principal: Mike Krack<br>Technical Director: Dan Fallows<br>Lead Mechanic: Sebastian Witt</p>
+        </article>
+        <article class="team-card alpine">
+          <img class="team-logo" src="https://via.placeholder.com/96x96.png?text=Alpine" alt="Alpine logo">
+          <h3>BWT Alpine F1 Team</h3>
+          <p>French engineering and fierce determination at every circuit.</p>
+          <p>Owner: Renault Group<br>Team Principal: Bruno Famin<br>Technical Director: Pat Fry<br>Lead Mechanic: Louise Hackett</p>
+        </article>
+        <article class="team-card williams">
+          <img class="team-logo" src="https://via.placeholder.com/96x96.png?text=Williams" alt="Williams logo">
+          <h3>Williams Racing</h3>
+          <p>Historic British constructor rebuilding toward the podium.</p>
+          <p>Owner: Dorilton Capital<br>Team Principal: James Vowles<br>Technical Director: François-Xavier Demaison<br>Lead Mechanic: Anna Gill</p>
+        </article>
+        <article class="team-card alfa-romeo">
+          <img class="team-logo" src="https://via.placeholder.com/96x96.png?text=Alfa+Romeo" alt="Alfa Romeo logo">
+          <h3>Alfa Romeo</h3>
+          <p>Sauber-led precision with a strong focus on development.</p>
+          <p>Owner: Sauber Motorsport AG<br>Team Principal: Andreas Seidl<br>Technical Director: Jörg Zander<br>Lead Mechanic: Marco Ricci</p>
+        </article>
+        <article class="team-card haas">
+          <img class="team-logo" src="https://via.placeholder.com/96x96.png?text=Haas" alt="Haas logo">
+          <h3>Haas F1 Team</h3>
+          <p>American grit on the world stage, seeking consistent progress.</p>
+          <p>Owner: Gene Haas<br>Team Principal: Ayao Komatsu<br>Technical Director: Simone Resta<br>Lead Mechanic: Luka Petrovic</p>
+        </article>
+        <article class="team-card alphatauri">
+          <img class="team-logo" src="https://via.placeholder.com/96x96.png?text=AlphaTauri" alt="AlphaTauri logo">
+          <h3>Scuderia AlphaTauri</h3>
+          <p>Red Bull’s talent factory, focused on driver development and speed.</p>
+          <p>Owner: Red Bull GmbH<br>Team Principal: Laurent Mekies<br>Technical Director: David Sánchez<br>Lead Mechanic: Marco Rossi</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="drivers-section page-panel" id="drivers" data-page="drivers">
+      <div class="section-heading">
+        <span class="section-tag">Drivers</span>
+        <h2>Driver roster & histories</h2>
+      </div>
+      <div class="drivers-grid">
+        <div class="driver-profile">
+          <img class="driver-photo" src="https://via.placeholder.com/360x180.png?text=Max+Verstappen" alt="Max Verstappen">
+          <strong>Max Verstappen</strong>
+          <span>Red Bull</span>
+          <p>Three-time world champion known for aggressive racecraft and late-braking passes. Debuted in 2015 as the youngest driver ever and quickly became the dominant force in F1.</p>
+        </div>
+        <div class="driver-profile">
+          <img class="driver-photo" src="https://via.placeholder.com/360x180.png?text=Sergio+P%C3%A9rez" alt="Sergio Pérez">
+          <strong>Sergio Pérez</strong>
+          <span>Red Bull</span>
+          <p>Experienced race-winner prized for tyre management and podium finishes. Joined Red Bull in 2021 after strong results at Racing Point and quickly became an essential teammate to Verstappen.</p>
+        </div>
+        <div class="driver-profile">
+          <img class="driver-photo" src="https://via.placeholder.com/360x180.png?text=Lewis+Hamilton" alt="Lewis Hamilton">
+          <strong>Lewis Hamilton</strong>
+          <span>Mercedes</span>
+          <p>Seven-time world champion with a record for race wins and pole positions. Hamilton began in 2007 and transformed Mercedes into the modern era’s greatest team.</p>
+        </div>
+        <div class="driver-profile">
+          <img class="driver-photo" src="https://via.placeholder.com/360x180.png?text=George+Russell" alt="George Russell">
+          <strong>George Russell</strong>
+          <span>Mercedes</span>
+          <p>Young British talent with a rapid rise through the junior categories. Joined Mercedes in 2022 after impressive performances at Williams and is seen as a future title contender.</p>
+        </div>
+        <div class="driver-profile">
+          <img class="driver-photo" src="https://via.placeholder.com/360x180.png?text=Charles+Leclerc" alt="Charles Leclerc">
+          <strong>Charles Leclerc</strong>
+          <span>Ferrari</span>
+          <p>Ferrari’s qualifying specialist with a strong record of pole positions. Leclerc arrived in F1 with Sauber in 2018 and became Ferrari’s lead driver in 2019.</p>
+        </div>
+        <div class="driver-profile">
+          <img class="driver-photo" src="https://via.placeholder.com/360x180.png?text=Carlos+Sainz" alt="Carlos Sainz">
+          <strong>Carlos Sainz</strong>
+          <span>Ferrari</span>
+          <p>Consistent and adaptable, Sainz brings steady points finishes and strategic thinking. He joined Ferrari in 2021 after strong seasons with McLaren and Renault.</p>
+        </div>
+        <div class="driver-profile">
+          <img class="driver-photo" src="https://via.placeholder.com/360x180.png?text=Lando+Norris" alt="Lando Norris">
+          <strong>Lando Norris</strong>
+          <span>McLaren</span>
+          <p>Charismatic British driver known for quick pace and clean overtakes. Norris scored his first podium in 2020 and remains McLaren’s rising star.</p>
+        </div>
+        <div class="driver-profile">
+          <img class="driver-photo" src="https://via.placeholder.com/360x180.png?text=Oscar+Piastri" alt="Oscar Piastri">
+          <strong>Oscar Piastri</strong>
+          <span>McLaren</span>
+          <p>Freshly arrived from Formula 2 with a reputation for calm racecraft. Piastri claimed the F2 championship in 2021 and made an impressive F1 debut.</p>
+        </div>
+        <div class="driver-profile">
+          <img class="driver-photo" src="https://via.placeholder.com/360x180.png?text=Fernando+Alonso" alt="Fernando Alonso">
+          <strong>Fernando Alonso</strong>
+          <span>Aston Martin</span>
+          <p>Two-time world champion with unmatched race experience and tactical genius. Alonso returned to F1 in 2021 and continues to produce standout performances.</p>
+        </div>
+        <div class="driver-profile">
+          <img class="driver-photo" src="https://via.placeholder.com/360x180.png?text=Lance+Stroll" alt="Lance Stroll">
+          <strong>Lance Stroll</strong>
+          <span>Aston Martin</span>
+          <p>Strong qualifying performer with a history of podium finishes. Stroll moved to Aston Martin in 2021 and has helped the team grow steadily.</p>
+        </div>
+        <div class="driver-profile">
+          <img class="driver-photo" src="https://via.placeholder.com/360x180.png?text=Esteban+Ocon" alt="Esteban Ocon">
+          <strong>Esteban Ocon</strong>
+          <span>Alpine</span>
+          <p>French driver with a tenacious style and a Grand Prix victory in his record. Ocon joined Alpine in 2020 and is a consistent points scorer for the team.</p>
+        </div>
+        <div class="driver-profile">
+          <img class="driver-photo" src="https://via.placeholder.com/360x180.png?text=Pierre+Gasly" alt="Pierre Gasly">
+          <strong>Pierre Gasly</strong>
+          <span>Alpine</span>
+          <p>Former AlphaTauri winner who delivers strong late-race pace. Gasly rejoined Alpine to continue building his reputation as a top midfield driver.</p>
+        </div>
+        <div class="driver-profile">
+          <img class="driver-photo" src="https://via.placeholder.com/360x180.png?text=Alex+Albon" alt="Alex Albon">
+          <strong>Alex Albon</strong>
+          <span>Williams</span>
+          <p>British-Thai racer who returned to F1 with Williams after a strong comeback in Formula E. Known for consistency and clutch race moments.</p>
+        </div>
+        <div class="driver-profile">
+          <img class="driver-photo" src="https://via.placeholder.com/360x180.png?text=Logan+Sargeant" alt="Logan Sargeant">
+          <strong>Logan Sargeant</strong>
+          <span>Williams</span>
+          <p>American rookie with a steady start in Formula 1. Sargeant earned his seat through strong junior results and brings fresh talent to Williams.</p>
+        </div>
+        <div class="driver-profile">
+          <img class="driver-photo" src="https://via.placeholder.com/360x180.png?text=Valtteri+Bottas" alt="Valtteri Bottas">
+          <strong>Valtteri Bottas</strong>
+          <span>Alfa Romeo</span>
+          <p>Veteran Finnish driver with multiple race wins and championship experience. Bottas joined Alfa Romeo after six seasons at Mercedes.</p>
+        </div>
+        <div class="driver-profile">
+          <img class="driver-photo" src="https://via.placeholder.com/360x180.png?text=Zhou+Guanyu" alt="Zhou Guanyu">
+          <strong>Zhou Guanyu</strong>
+          <span>Alfa Romeo</span>
+          <p>China’s first full-time F1 driver, admired for his patient race development. Zhou has steadily improved his performance since debuting in 2022.</p>
+        </div>
+        <div class="driver-profile">
+          <img class="driver-photo" src="https://via.placeholder.com/360x180.png?text=Nico+H%C3%BClkenberg" alt="Nico Hülkenberg">
+          <strong>Nico Hülkenberg</strong>
+          <span>Haas</span>
+          <p>Experienced German racer known for race craft and consistency. Hülkenberg returned to a full-time seat in 2023 after filling in at several teams.</p>
+        </div>
+        <div class="driver-profile">
+          <img class="driver-photo" src="https://via.placeholder.com/360x180.png?text=Kevin+Magnussen" alt="Kevin Magnussen">
+          <strong>Kevin Magnussen</strong>
+          <span>Haas</span>
+          <p>Hard-charging Danish driver with a never-say-die attitude. Magnussen is a strong performer in mixed conditions and known for aggressive starts.</p>
+        </div>
+        <div class="driver-profile">
+          <img class="driver-photo" src="https://via.placeholder.com/360x180.png?text=Yuki+Tsunoda" alt="Yuki Tsunoda">
+          <strong>Yuki Tsunoda</strong>
+          <span>AlphaTauri</span>
+          <p>Fast Japanese driver with flair and strong qualifying pace. Tsunoda made his F1 debut in 2021 and has shown rapid improvement each season.</p>
+        </div>
+        <div class="driver-profile">
+          <img class="driver-photo" src="https://via.placeholder.com/360x180.png?text=Daniel+Ricciardo" alt="Daniel Ricciardo">
+          <strong>Daniel Ricciardo</strong>
+          <span>AlphaTauri</span>
+          <p>Seasoned race-winner with a trademark overtaking style. Ricciardo returned to AlphaTauri to rebuild after a challenging spell at McLaren.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="schedule-section page-panel" id="schedule" data-page="schedule">
+      <div class="section-heading">
+        <span class="section-tag">Schedule</span>
+        <h2>Race calendar highlights</h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <span class="timeline-date">May 26</span>
+          <div>
+            <h3>Monaco Grand Prix</h3>
+            <p>The street circuit classic returns with high drama and tight racing.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-date">Jul 7</span>
+          <div>
+            <h3>Silverstone</h3>
+            <p>Historic high-speed action at the home of British motorsport.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-date">Nov 24</span>
+          <div>
+            <h3>Abu Dhabi</h3>
+            <p>An epic season finale under the lights.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="news-section page-panel" id="news" data-page="news">
+      <div class="section-heading">
+        <span class="section-tag">News</span>
+        <h2>Latest Paddock Headlines</h2>
+      </div>
+      <div class="news-grid">
+        <article class="news-card">
+          <span class="news-badge">Official</span>
+          <h3>Monaco setup secrets</h3>
+          <p>Teams reveal their low-downforce packages for the tightest street race.</p>
+        </article>
+        <article class="news-card">
+          <span class="news-badge">Update</span>
+          <h3>Tyre strategy insights</h3>
+          <p>How the latest compound choices are shaping race weekend tactics.</p>
+        </article>
+        <article class="news-card">
+          <span class="news-badge">Preview</span>
+          <h3>Driver battles to watch</h3>
+          <p>Which rivalries are likely to decide the championship this year.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="chat-section page-panel" id="chat" data-page="chat">
+      <div class="section-heading">
+        <span class="section-tag">Chat</span>
+        <h2>Fan chat & comments</h2>
+      </div>
+      <div class="chat-grid">
+        <div class="chat-panel">
+          <h3>Latest chatter</h3>
+          <div id="chat-messages" class="chat-messages"></div>
+        </div>
+        <form class="chat-form" id="chat-form">
+          <h3>Post a comment</h3>
+          <label>
+            Name
+            <input type="text" id="chat-name" placeholder="Your name or nickname">
+          </label>
+          <label>
+            Comment
+            <textarea id="chat-message" placeholder="Share your thoughts on F1..." rows="5" required></textarea>
+          </label>
+          <button type="submit" class="btn btn-primary">Send comment</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="about-section page-panel" id="about" data-page="about">
+      <div class="section-heading">
+        <span class="section-tag">About</span>
+        <h2>Contact information</h2>
+      </div>
+      <div class="about-card">
+        <p>Want to get in touch? Click the button below to reveal the contact email.</p>
+        <button class="btn btn-primary" id="show-email">Show email</button>
+        <p id="about-email" class="email-text">Email: <span class="email-hidden">Click button to reveal</span></p>
+      </div>
+    </section>
+
+    <div class="auth-modal" id="auth-modal" aria-hidden="true">
+      <div class="auth-backdrop" id="auth-backdrop"></div>
+      <div class="auth-content" role="dialog" aria-modal="true" aria-labelledby="auth-title">
+        <button class="auth-close" id="auth-close" aria-label="Close">×</button>
+        <div class="auth-tabs">
+          <button class="auth-tab active" data-auth="login">Login</button>
+          <button class="auth-tab" data-auth="signup">Sign Up</button>
+        </div>
+        <div class="auth-panels">
+          <form class="auth-panel active" id="login-panel">
+            <h3 id="auth-title">Member Login</h3>
+            <label>
+              Email
+              <input type="email" id="login-email" placeholder="you@example.com" required>
+            </label>
+            <label>
+              Password
+              <input type="password" id="login-password" placeholder="Enter password" required>
+            </label>
+            <button type="submit" class="btn btn-primary">Sign in</button>
+          </form>
+          <form class="auth-panel" id="signup-panel">
+            <h3>Sign Up</h3>
+            <label>
+              Email
+              <input type="email" id="signup-email" placeholder="you@example.com" required>
+            </label>
+            <label>
+              Password
+              <input type="password" id="signup-password" placeholder="Create password" required>
+            </label>
+            <label>
+              Confirm Password
+              <input type="password" id="signup-confirm" placeholder="Confirm password" required>
+            </label>
+            <button type="submit" class="btn btn-primary">Create account</button>
+          </form>
+          <div class="auth-panel" id="verify-panel">
+            <h3>Verify your account</h3>
+            <p>We sent a verification code to your email. Enter it below to complete registration.</p>
+            <label>
+              Verification code
+              <input type="text" id="verify-code" placeholder="123456" required>
+            </label>
+            <button type="button" class="btn btn-primary" id="verify-button">Verify account</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="button-message" class="message-box" aria-live="polite"></div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-columns">
+      <p>Formula 1 • Official Fan Experience</p>
+      <p>2026 FIA World Championship</p>
+      <p>Designed to feel like an official F1 presentation.</p>
+    </div>
+  </footer>
+
+  <script src="formula1.js"></script>
+  <script src="formula1-images.js"></script>
+</body>
+</html>
